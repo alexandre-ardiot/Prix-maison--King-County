@@ -13,7 +13,7 @@ model = pickle.load(pickle_in)
 
 #Création du dataframe utilisateur avec toutes les colonnes à 0.0
 df_user = df.loc[len(df)-1:].apply(lambda x: 0.0)
-df_user = df_user.drop(["id", "date", "prix"])
+df_user = df_user.drop(["id", "date", "prix", "m2_habitable15", "m2_parcelle15"])
 
 #Config Streamlit
 st.set_page_config(layout="wide")
